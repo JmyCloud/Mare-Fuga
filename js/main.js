@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
     
-    // Check for saved theme preference or use preferred color scheme
-    const currentTheme = localStorage.getItem('theme') || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    // Always use light mode as default theme if no preference is saved
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
     // Apply the current theme
     if (currentTheme === 'dark') {
