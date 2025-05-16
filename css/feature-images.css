@@ -1,0 +1,31 @@
+/* Feature Images Styling - 16:9 Aspect Ratio */
+#features .aspect-w-16.aspect-h-9 {
+    width: 100%;
+    max-width: 640px;
+    height: 360px; /* 16:9 ratio for 640px width */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#features .aspect-w-16.aspect-h-9 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+/* Hover animation */
+#features .aspect-w-16.aspect-h-9.group:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #features .aspect-w-16.aspect-h-9 {
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio as padding */
+    }
+}
